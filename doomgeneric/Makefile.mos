@@ -21,7 +21,7 @@ clean:
 	rm -f $(OUTPUT).map
 
 $(OUTPUT): $(OBJS)
-	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) -o $(OUTPUT) $(LIBS)
+	$(LD) $(LDFLAGS) $(OBJS) -o $(OUTPUT) $(LIBS)
 
 $(OBJS): | $(OBJDIR)
 
