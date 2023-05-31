@@ -3,7 +3,7 @@
 CC=~/cross_compiler/bin/x86_64-elf-gcc
 LD=~/cross_compiler/bin/x86_64-elf-ld
 CFLAGS=-ffreestanding -mno-red-zone -mcmodel=large -march=nocona -g -I../../../../libc/inc -D mos
-LDFLAGS=-static -T../../../../apps/app.ld ../../../../libc.a
+LDFLAGS=-static -T../../../../apps/app.ld 
 
 # subdirectory for objects
 OBJDIR=build
@@ -21,7 +21,7 @@ clean:
 	rm -f $(OUTPUT).map
 
 $(OUTPUT): $(OBJS)
-	$(LD) $(LDFLAGS) $(OBJS) -o $(OUTPUT) $(LIBS)
+	$(LD) $(LDFLAGS) $(OBJS) ../../../../libc.a -o $(OUTPUT) $(LIBS)
 
 $(OBJS): | $(OBJDIR)
 
