@@ -2,7 +2,7 @@
 
 CC=~/cross_compiler/bin/x86_64-elf-gcc
 LD=~/cross_compiler/bin/x86_64-elf-ld
-CFLAGS=-ffreestanding -mno-red-zone -mcmodel=large -march=nocona -g -I../../../../libc/inc
+CFLAGS=-ffreestanding -mno-red-zone -mcmodel=large -march=nocona -g -I../../../../libc/inc -D mos
 LDFLAGS=-static -T../../../../apps/app.ld ../../../../libc.a
 
 # subdirectory for objects
