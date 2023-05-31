@@ -18,7 +18,9 @@
 #include <ctype.h>
 #include <math.h>
 #include <string.h>
+#ifndef mos
 #include <fcntl.h>
+#endif
 #include <stdio.h>
 
 #include "config.h"
