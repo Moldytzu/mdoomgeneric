@@ -47,7 +47,9 @@ rcsid[] = "$Id: i_x.c,v 1.6 1997/02/03 22:45:10 b1 Exp $";
 
 #include <stdarg.h>
 
+#ifndef mos
 #include <sys/types.h>
+#endif
 
 //#define CMAP256
 
