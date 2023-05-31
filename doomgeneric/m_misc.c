@@ -32,8 +32,11 @@
 #include <direct.h>
 #endif
 #else
+
+#ifndef mos
 #include <sys/stat.h>
 #include <sys/types.h>
+#endif
 #endif
 
 #include "doomtype.h"
